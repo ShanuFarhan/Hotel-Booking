@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 // import './styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Login from './Pages/Login/Login';
 import { Route, Router, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
