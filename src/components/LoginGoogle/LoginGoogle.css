@@ -25,12 +25,15 @@
     background-image: url("https://st2.depositphotos.com/1533202/7708/i/450/depositphotos_77088807-stock-photo-blurred-bedroom-as-background.jpg");
     display: flex;
     height: 650px;
+    width: 100%;
     flex-direction: column;
 }
 .loginform h2{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 300px;
+    margin-left: 12 0px;
     margin-bottom: 20px;
+    width: 25%;
 }
 .form{
     margin-top: 60px;
@@ -45,8 +48,8 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-left: 580px;
-    margin-top: 50px;
+    margin-left: 180px;
+    margin-top: 10px;
   }
 
   .google-icon {
