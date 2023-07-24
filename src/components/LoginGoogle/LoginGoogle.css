@@ -31,8 +31,8 @@
 .loginform h2{
     text-align: center;
     margin-top: 300px;
-    margin-left: 12 0px;
-    margin-bottom: 20px;
+    margin-left: 340px;
+    margin-bottom: 50px;
     width: 25%;
 }
 .form{
@@ -48,7 +48,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-left: 180px;
+    margin-left: 4100px;
     margin-top: 10px;
   }
 
