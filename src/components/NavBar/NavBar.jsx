@@ -40,11 +40,11 @@ const NavBar = () => {
             
           </Link>
         </li>
-        <li className="navbar-menu-item">
+        {/* <li className="navbar-menu-item">
           <button className="theme-toggle" onClick={toggleDarkMode}>
             {isDarkMode ? <FaToggleOn /> : <FaToggleOff />}
           </button>
-        </li>
+        </li> */}
         <li className="navbar-menu-item">
           <button className="logout-button" onClick={handleLogout}>
             <FaSignOutAlt />
