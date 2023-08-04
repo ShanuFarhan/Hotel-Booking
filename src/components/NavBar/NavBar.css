@@ -12,14 +12,18 @@
     margin-bottom: 20px;
     border: whitesmoke solid 6px;
   }
-  
   .navbar-brand {
     margin-right: auto;
+    font-size: large;
     font-weight: bold;
     margin-left: 100px;
     font-weight: 900;
-    font-size: large;
-
+    padding-top: 10px;
+    display: flex;
+  }
+  .navbar-brand img{
+    width: 12%;
+    padding-bottom: 5px;
   }
   
   .navbar-toggle {
