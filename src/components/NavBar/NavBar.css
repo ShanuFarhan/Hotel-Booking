@@ -5,58 +5,100 @@
 }
 .navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 20px;
-    height: 60px;
-    margin-bottom: 20px;
-    border: whitesmoke solid 6px;
-  }
-  .navbar-brand {
-    margin-right: auto;
-    font-size: large;
-    font-weight: bold;
-    margin-left: 100px;
-    font-weight: 900;
-    padding-top: 10px;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
     display: flex;
-  }
-  .navbar-brand img{
-    width: 12%;
-    padding-bottom: 5px;
-  }
-  
-  .navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+    align-items: center;
+    font-size: 1.5rem;
     font-weight: bold;
-  }
-  
-  .navbar-menu {
+    color: #333;
+}
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.navbar-menu {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-menu.open {
+    gap: 1.5rem;
+}
+.navbar-menu-item a,
+.navbar-menu-item button {
     display: flex;
-    flex-direction: column;
-  }
-  
-  .navbar-menu-item {
-    margin-left: 10px;
-  }
-  
-  @media (max-width: 768px) {
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.navbar-menu-item a:hover,
+.navbar-menu-item button:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+.profile-link {
+    position: relative;
+}
+.booking-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.logout-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+.navbar-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
     .navbar-toggle {
-      display: block;
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        color: #333;
+        cursor: pointer;
     }
-  
     .navbar-menu {
-      display: none;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-  }
+    .navbar-menu.open {
+        display: flex;
+    }
+}
   

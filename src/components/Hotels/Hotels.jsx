@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
-import "./Hotels.css"
+import { addDoc, collection } from 'firebase/firestore';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { db } from '../../Firebase/config';
+import "./Hotels.css";
 const Hotels = (props) => {
   const[showModel,setShowmodel]=useState(false)
   const[guests,setGuests]=useState("")
@@ -30,31 +32,27 @@ const Hotels = (props) => {
     setBooked(false)
   }
   
-  const handleconfirm=(e)=>{
-    // alert("Booking Successfully")
-  //  const collections=collection(db,"BookingDetails")
-  //  const getCollection=async()=>{
-  //   const data=await getDocs(collections)
-   
-  //   console.log(data);
-  //  }
-  //  useEffect(()=>{
-  //   getCollection()
-  //  },[])
-  localStorage.setItem('numOfGuests', guests);
-    localStorage.setItem('checkInDate', checkIn);
-    localStorage.setItem('checkOutDate', checkOut);
-    localStorage.setItem('hotelName', props.info.name);
-    e.preventDefault()
-    setBooked(true)
-    setShowmodel(false)
-    e.preventDefault()
-    setGuests("")
-    setCheckIn("")
-    setCheckOut("")
-    setNumberOfNights("")
-    settotalPrice("")
-  }
+  const handleconfirm = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, 'BookingDetails'), {
+        numOfGuests: guests,
+        checkInDate: checkIn,
+        checkOutDate: checkOut,
+        hotelName: props.info.name,
+        totalPrice: totalPrice
+      });
+      setBooked(true);
+      setShowmodel(false);
+      setGuests("");
+      setCheckIn("");
+      setCheckOut("");
+      setNumberOfNights("");
+      settotalPrice("");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  };
   return (
     <>
     <div className='hotelDetails'>
